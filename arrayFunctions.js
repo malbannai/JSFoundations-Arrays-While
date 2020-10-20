@@ -9,8 +9,13 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(a) {
-  // Your code here
+  if (a.length % 2 === 1) {
+    return true;
+  }
+  return false;
 }
+
+// console.log(isArrayLengthOdd([1, 2, 2]));
 
 /**
  * isArrayLengthEven(a):
@@ -23,7 +28,8 @@ function isArrayLengthOdd(a) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(a) {
-  // Your code here
+  if (a.length % 2 === 1) return false;
+  return true;
 }
 
 /**
@@ -35,8 +41,12 @@ function isArrayLengthEven(a) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(a) {
-  // Your code here
+  let aCopy = a;
+  aCopy.push("Laila");
+  return aCopy;
 }
+
+// console.log(addLailaToArray(["Test"]));
 
 /**
  * eliminateTeam(a):
@@ -47,7 +57,7 @@ function addLailaToArray(a) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(a) {
-  // Your code here
+  return a.pop();
 }
 
 /**
@@ -61,8 +71,16 @@ function eliminateTeam(a) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(a) {
-  // Your code here
+  let aClone = [];
+  if (a.length % 2 === 0) {
+    aClone = a.slice(a.length / 2, a.length);
+    return aClone;
+  }
+  return aClone;
 }
+
+// let tester = ["apple", "orange", "banana", "kiwi"];
+// console.log(secondHalfOfArrayIfItIsEven(tester));
 
 /**
  * youGottaCalmDown(s):
