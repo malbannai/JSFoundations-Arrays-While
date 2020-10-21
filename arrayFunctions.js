@@ -97,14 +97,13 @@ function secondHalfOfArrayIfItIsEven(a) {
  * - Use string method .endsWith()
  */
 function youGottaCalmDown(s) {
-  // Trail 3:
-  let sChecker = s;
-  while (s.endsWith("!")) {
-    if (s.endsWith("!")) s = s.slice(0, -1);
+  // Trail 4:
+  while (s.endsWith("!!")) {
+    s = s.slice(0, -1);
   }
-  if (sChecker.endsWith("!")) return s + "!";
   return s;
 }
+//
 
 // console.log(youGottaCalmDown("HI!!!!!!!!!!"));
 // console.log(youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!"));
@@ -147,6 +146,15 @@ Trail 2:
     return s + "!";
   }
   return s;
+
+Trail 3:
+  let sChecker = s;
+  while (s.endsWith("!")) {
+    if (s.endsWith("!")) s = s.slice(0, -1);
+  }
+  if (sChecker.endsWith("!")) return s + "!";
+  return s;
+
  */
 module.exports = {
   isArrayLengthOdd,
